@@ -17,8 +17,17 @@
 	</style>
 </head>
 
+<script>
+	
+	function zoom(){
+		var proporcao = screen.deviceXDPI / screen.logicalXDPI;
+		var zoom_mantido = 1 / proporcao;
+		parent.document.body.style.zoom = zoom_mantido;
+	}
 
-<body>
+</script>
+
+<body onresize="zoom()" onload="zoom()" >
 
 <script>
 	//variaveis do jogo
