@@ -2,6 +2,10 @@
 <html>
 
 <head>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
 	<meta charset="utf-8"/>
 	<title>BlockGame</title>
 	<style>
@@ -15,28 +19,18 @@
 
 		}
 	</style>
+
 </head>
 
-<script>
-	
-	function zoom(){
-		var proporcao = screen.deviceXDPI / screen.logicalXDPI;
-		var zoom_mantido = 1 / proporcao;
-		parent.document.body.style.zoom = zoom_mantido;
-	}
-
-</script>
-
-<body onresize="zoom()" onload="zoom()" >
+<body>
 
 <script>
 	//variaveis do jogo
 
 	/*variaveis: canvas e contexto(ctx) seram usadas para desenhos do jogo. variaveis ALTURA e LARGURA servem para pegar a janela do usuario. variavel frame serve para contar os quadros sempre que passar por um quadro*/
 
+
 	var canvas, ctx, ALTURA, LARGURA, frames = 0, maxPulos = 3, velocidade = 6, estadoAtual, record,
-
-
 
 	estados = {
 		jogar: 0,
@@ -327,6 +321,5 @@
 	main();
 
 </script>
-
 </body>
 </html>
